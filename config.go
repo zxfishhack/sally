@@ -83,6 +83,10 @@ func Parse(path string) (*Config, error) {
 			p.Branch = _defaultBranch
 			c.Packages[v] = p
 		}
+		if !strings.HasPrefix(p.Repo, "http") {
+			p.Repo = strings.TrimPrefix(p.Repo, "/")
+			p.Repo = "https://" + p.Repo
+		}
 	}
 
 	return &c, err

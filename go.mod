@@ -1,4 +1,4 @@
-module go.uber.org/sally
+module github.com/zxfishhack/sally
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
