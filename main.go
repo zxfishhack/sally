@@ -1,4 +1,4 @@
-package main // import "go.uber.org/sally"
+package main // import "github.com/zxfishhack/sally"
 
 import (
 	"flag"
