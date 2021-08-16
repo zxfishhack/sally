@@ -14,8 +14,8 @@ const _defaultBranch = "master"
 
 // Config represents the structure of the yaml file
 type Config struct {
-	URL      string             `yaml:"url"`
-	Packages map[string]Package `yaml:"packages"`
+	URL      string              `yaml:"url"`
+	Packages map[string]*Package `yaml:"packages"`
 	Godoc    struct {
 		Host string `yaml:"host"`
 	} `yaml:"godoc"`

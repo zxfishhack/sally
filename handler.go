@@ -25,7 +25,7 @@ func CreateHandler(config *Config) http.Handler {
 	for name, pkg := range config.Packages {
 		handle := packageHandler{
 			pkgName: name,
-			pkg:     pkg,
+			pkg:     *pkg,
 			config:  config,
 		}.Handle
 		router.GET(fmt.Sprintf("/%s", name), handle)
